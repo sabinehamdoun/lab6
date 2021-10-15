@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: rgb(133, 25, 25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #div1{
+            padding: 15px 0px 0px 10px;
+            background-color: rgb(164, 12, 235);
+            width: 300px;
+            height: 250px;
+            margin: 0 auto;
+            
+        }
+        #div2{
+            color: black;
+            text-align: center;
+        }
+
+        @media screen and (max-width :900px) {
+            body{
+                display: center;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @media screen and (min-width :600px) {
+            body{
+                display: center;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+
+  </head>
+  <body>
+      <div id="divv">
+        <div id="div2">
+            <p><h3>Welcome Sabine Hamdoun </h3></p><br>
+        </div>
+      <div id="div1">
+        <label> a = </label> 
+        <input type="number" id="num1"><br><br>
+        <label> b = </label>
+        <input type="number" id="num2"><br><br>
+        <input type="button" name="add" id="add" value="add" onClick="myFunction('add')">
+        <input type="button" name="subtract" id="subtract" value="subtract" onClick="myFunction('subtract')">
+        <input type="button" name="multiply" id="multiply" value="multiply" onClick="myFunction('multiply')">
+        <input type="button" name="divide" id="divide" value="divide" onClick="myFunction('divide')"> <br><br>
+
+        <!--<input type="button" name="add" id="add" value="add" onClick="add()">
+        <input type="button" name="subtract" id="subtract" value="subtract" onClick="subtract()">
+        <input type="button" name="multiply" id="multiply" value="multiply" onClick="multiply()">
+        <input type="button" name="divide" id="divide" value="divide" onClick="divide()"> <br><br> -->
+        
+        <label for="result"> Result: </label>
+        <input type="number" id="result" readonly> <br><br>
+        <button type="button" onclick="printArray()"> print array</button>
+        <p id="par"> </p>
+       </div>
+       </div>
+  </body>
+  <script src="lab6.js"> 
+ /* let input_a = document.getElementById("num1");
+    let input_b = document.getElementById("num2");
+    function add(){
+        let a = parseInt(input_a.value);
+        let b = parseInt(input_b.value);
+        console.log(a);
+        console.log(b);
+        document.getElementById("result").value = a+b;
+        
+	}
+
+    function subtract(){
+		let a = parseInt(input_a.value);
+        let b = parseInt(input_b.value);
+        console.log(a);
+        console.log(b);
+        document.getElementById("result").value = a-b;
+	}
+
+    function multiply(){
+		let a = parseInt(input_a.value);
+        let b = parseInt(input_b.value);
+        console.log(a);
+        console.log(b);
+        document.getElementById("result").value = a*b;
+	}
+
+    function divide(){
+		let a = parseInt(input_a.value);
+        let b = parseInt(input_b.value);
+        console.log(a);
+        console.log(b);
+        document.getElementById("result").value = a/b;
+	}
+*/
+    function myFunction(input){
+        let input_a = document.getElementById("num1");
+        let input_b = document.getElementById("num2");
+        var x, y, z;
+        let a = parseInt(input_a.value);
+        let b = parseInt(input_b.value);
+        console.log(a);
+        console.log(b);
+
+        if (input== add) {
+            let result = a*b;
+            document.getElementById("result").value = result;
+            let n = result.toString();
+            arr.push(n);
+        } else if (input === 'subtract') {
+            let result = a-b;
+            document.getElementById("result").value = result;
+            let n = result.toString();
+            arr.push(n);
+        }
+        else if (input == 'multiply') {
+            let result = a*b;
+            document.getElementById("result").value = result;
+            let n = result.toString();
+            arr.push(n);
+        }
+        else{
+            let result = a/b;
+            document.getElementById("result").value = result;
+            let n = result.toString();
+            arr.push(n);
+        }        
+    }
+
+    function printArray(){
+        for(var x=0; x<arr.length; i++){
+            console.log(arr[i]);
+        }
+        document.getElementById("par").innerHTML = arr;
+    }
+        const arr1 = ["John","Jason","Kevin"];
+        arr1.unshift("jad");
+        const arr2 = ["manel", "nahla", "sabine", "mirna"];
+        const arr3 = arr1.concat(arr2);
+        arr3.indexOf("John");
+        arr3.length
+        console.log(arr3);
+        arr3.pop();
+        console.log(arr3);
+        arr3.shift();
+        console.log(arr3);
+        arr3.push("lara");
+        console.log(arr3);
+        arr3.reverse();
+        console.log(arr3);
+        const arr4 = arr3.slice(0,3);
+        arr4.includes("sabine");
+        console.log(arr4);
+        let s = "";
+        function Funct(arr3){
+            s += arr3 +" ";
+        }
+        arr3.forEach(Funct);
+
+    
+   </script>
+</html>
